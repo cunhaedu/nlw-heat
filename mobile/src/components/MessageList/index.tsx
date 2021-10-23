@@ -12,30 +12,19 @@ import { Message } from '../Message';
 import { styles } from './styles';
 
 export function MessageList(){
-  // const [messages, setMessages] = useState<IMessage[]>([]);
+  const [messages, setMessages] = useState<IMessage[]>([]);
 
-  // useEffect(() => {
-  //   api.get<IMessage[]>('messages').then(data => {
-  //     const { data: response } = data;
+  useEffect(() => {
+    api.get<IMessage[]>('messages').then(data => {
+      const { data: response } = data;
 
-  //     console.log(response);
+      console.log(response);
 
-  //     setMessages(response);
-  //   }).catch(err => {
-  //     console.log(err);
-  //   })
-  // }, []);
-
-  const message: IMessage = {
-    text: 'olá',
-    id: '1234',
-    created_at: new Date(),
-    user: {
-      avatar_url: 'https://github.com/cunhaedu.png',
-      name: 'Eduardo',
-      id: '2345'
-    } as IUser
-  }
+      setMessages(response);
+    }).catch(err => {
+      console.log(err);
+    })
+  }, []);
 
   return (
     <ScrollView
@@ -43,16 +32,7 @@ export function MessageList(){
       contentContainerStyle={styles.content}
       keyboardShouldPersistTaps='never'
     >
-      <Message data={message} />
-      <Message data={message} />
-      <Message data={message} />
-      {/* {messages.length && (
-        <>
-          <Message data={message} />
-          <Message data={message} />
-          <Message data={message} />
-        </>
-      )} */}
+      {messages.map(message => <Message key={message.id} data={message} />)}
     </ScrollView>
   );
 }

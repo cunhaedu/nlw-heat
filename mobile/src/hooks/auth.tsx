@@ -68,6 +68,7 @@ function AuthProvider({ children }: IAuthProvider) {
   }
 
   async function signOut() {
+    setUser(null);
     await AsyncStorage.multiRemove([USER_STORAGE, TOKEN_STORAGE]);
   }
 
