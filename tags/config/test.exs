@@ -7,8 +7,8 @@ import Config
 # Run `mix help test` for more information.
 config :tags, Tags.Repo,
   username: "postgres",
-  password: "postgres",
-  database: "tags_test#{System.get_env("MIX_TEST_PARTITION")}",
+  password: "123",
+  database: "heat_tags_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10

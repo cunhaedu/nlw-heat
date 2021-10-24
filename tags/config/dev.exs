@@ -3,8 +3,8 @@ import Config
 # Configure your database
 config :tags, Tags.Repo,
   username: "postgres",
-  password: "postgres",
-  database: "tags_dev",
+  password: "1234",
+  database: "heat_tags_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
