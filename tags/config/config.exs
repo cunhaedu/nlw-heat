@@ -17,6 +17,11 @@ config :tags, TagsWeb.Endpoint,
   pubsub_server: Tags.PubSub,
   live_view: [signing_salt: "QSNwJMPZ"]
 
+config :tags, Tags.Scheduler,
+  jobs: [
+    {"* * * * * *", {Tags.Tags.Count, :call, []}}
+  ]
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
