@@ -50,8 +50,6 @@ function AuthProvider({ children }: IAuthProvider) {
           code: authSessionResponse.params.code
         });
 
-        console.log(response);
-
         const { user, token } = response;
 
         api.defaults.headers.common['authorization'] = `Bearer ${token}`;

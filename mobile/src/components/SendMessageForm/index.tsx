@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 import { Alert, Keyboard, TextInput, View } from 'react-native';
+
 import { api } from '../../services/api';
 import { COLORS } from '../../theme';
 import { Button } from '../Button';
