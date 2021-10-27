@@ -23,7 +23,7 @@
 - [ ] Executar o socket.io em outra porta
 - [ ] Tratar erros na api
 
-## :construction_worker: Installation
+## :construction_worker: Como Executar
 
 **Você vai precisar do [Node.js](https://nodejs.org/en/download/), [Yarn](https://yarnpkg.com/) e  [Postgres](https://www.postgresql.org/) instalado, após isso é só seguir os comandos abaixo:**
 
@@ -38,3 +38,8 @@
 - Inicie o servidor com `yarn dev:server`;
 
 Feito isso a aplicação estará disponível em [`localhost:4000`](http://localhost:4000).
+
+## 📬 FAQ
+
+**Como obter as credencias de autenticação do github?**
+Para obter as credenciais é necessário ter uma conta no github e [criar um novo OAuth App](https://github.com/settings/developers). Feito isso é só preencher os dados e obter as credenciais.
